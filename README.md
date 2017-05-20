@@ -13,3 +13,6 @@
 + Type youtube url for steam
 + Right click on image on mainwindow - automatic save
 + On new windows with images - shift and mouse can manipulate image (move, zoom)
+
+
+Videos with both sides avaible [here](http://stereomaker.net/sample/index.html)
