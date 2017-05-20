@@ -1,0 +1,39 @@
+﻿<Window x:Class="stereoimage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:stereoimage"
+        mc:Ignorable="d"
+        Title="StereoImages" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Top">
+            <Button Margin="10" Content="Stereo image with one stereo file" Click="Button_Click" Height="30" Width="200"/>
+            <Button Margin="10" Content="Stereo image with nonstereo files"  Height="30" Width="200" Click="Button_Click_2"/>
+            <Button Margin="10" Content="Stereo images from video" Height="30" Click="Button_Click_1" Width="200"/>
+            <Button Margin="10" Content="Stereo images from stereo video" Height="30" Width="200" Click="Button_Click_3" />
+            <Button Margin="10" Content="Stereo images from stream" Height="30" Width="200" Click="Button_Click_4" />
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="labelX" Content="X" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBox x:Name="textBoxX" Height="23" TextWrapping="Wrap" Text="10" Width="85" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="labelY" Content="Y" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBoxY" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="10" Width="85"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="url" Content="Y" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBoxURL" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="https://www.youtube.com/watch?v=6ojPzimBnhw" Width="190"/>
+            </StackPanel>
+        </StackPanel>
+        <Image Name="stereoImage" Grid.Column="1" MouseRightButtonDown="stereoImage_MouseRightButtonDown" />
+    </Grid>
+</Window>
